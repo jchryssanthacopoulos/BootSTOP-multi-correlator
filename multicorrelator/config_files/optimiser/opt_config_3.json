@@ -1,0 +1,25 @@
+{
+  "pop_size": 1000,
+  "outdir": "output/test",
+  "use_wandb": false,
+  "num_islands": 1,
+  "max_iter": 1000,
+  "evolutions": 1,
+  "verbosity": 10,
+  "save_frequency": 100,
+  "debug_output_file": "debug.log",
+  "lambda_model": "three_value_lambdas",
+  "scaling": true,
+  "spin_scaling": false,
+  "F_block_interpolation": {
+    "name": "goblocks",
+    "params": {
+      "k_1_max": 10,
+      "k_2_max": 10,
+      "ell_min": 0,
+      "ell_max": 6,
+      "num_z_points": 100,
+      "z_pts_filename": "sampled_points_first_quadrant.npy"
+    }
+  }
+}

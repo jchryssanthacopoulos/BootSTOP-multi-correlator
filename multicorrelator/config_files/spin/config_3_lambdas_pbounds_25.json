@@ -1,0 +1,290 @@
+{
+    "external_delta_ij_constraint": 1,
+    "external_operators": [
+        {
+            "name": "sigma",
+            "spectrum": "negative_parity",
+            "spin_group": 1,
+            "operator": 1
+        },
+        {
+            "name": "epsilon",
+            "spectrum": "positive_parity",
+            "spin_group": 1,
+            "operator": 1
+        }
+    ],
+    "positive_parity_spectrum": {
+        "name": "positive_z2",
+        "ope_labels": [
+            "ssss",
+            "eeee"
+        ],
+        "spin_groups": [
+            {
+                "name": "epsilon",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 1.236046875,
+                "max_delta": 1.589203125,
+                "min_ope_coefficients": [
+                    0.9203719874999999,
+                    1.340880625
+                ],
+                "max_ope_coefficients": [
+                    1.1833354125,
+                    1.723989375
+                ]
+            },
+            {
+                "name": "spin0_1",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 3.3509700000000002,
+                "max_delta": 4.30839,
+                "min_ope_coefficients": [
+                    0.046385499999999996,
+                    1.344
+                ],
+                "max_ope_coefficients": [
+                    0.0596385,
+                    1.728
+                ]
+            },
+            {
+                "name": "spin0_2",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 6.03365,
+                "max_delta": 7.75755,
+                "min_ope_coefficients": [
+                    0.000642075,
+                    0.11191250000000001
+                ],
+                "max_ope_coefficients": [
+                    0.0008255249999999999,
+                    0.1438875
+                ]
+            },
+            {
+                "name": "spin0_3",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 6.3468124999999995,
+                "max_delta": 8.1601875,
+                "min_ope_coefficients": [
+                    0.00014175,
+                    0.163975
+                ],
+                "max_ope_coefficients": [
+                    0.00018225,
+                    0.210825
+                ]
+            },
+            {
+                "name": "spin2_1",
+                "spin": 2,
+                "num_operators": 1,
+                "min_delta": 2.625,
+                "max_delta": 3.375,
+                "min_ope_coefficients": [
+                    0.28537054,
+                    0.7780037125
+                ],
+                "max_ope_coefficients": [
+                    0.36690498,
+                    1.0002904875
+                ]
+            },
+            {
+                "name": "spin2_2",
+                "spin": 2,
+                "num_operators": 1,
+                "min_delta": 4.82050625,
+                "max_delta": 6.19779375,
+                "min_ope_coefficients": [
+                    0.0092526875,
+                    0.60395125
+                ],
+                "max_ope_coefficients": [
+                    0.0118963125,
+                    0.77650875
+                ]
+            },
+            {
+                "name": "spin2_3",
+                "spin": 2,
+                "num_operators": 1,
+                "min_delta": 6.191325,
+                "max_delta": 7.960275,
+                "min_ope_coefficients": [
+                    0.0004176375,
+                    0.19146749999999998
+                ],
+                "max_ope_coefficients": [
+                    0.0005369625,
+                    0.2461725
+                ]
+            },
+            {
+                "name": "spin4_1",
+                "spin": 4,
+                "num_operators": 1,
+                "min_delta": 4.3948318749999995,
+                "max_delta": 5.650498125,
+                "min_ope_coefficients": [
+                    0.060441499999999995,
+                    0.21693
+                ],
+                "max_ope_coefficients": [
+                    0.0777105,
+                    0.27891
+                ]
+            },
+            {
+                "name": "spin4_2",
+                "spin": 4,
+                "num_operators": 1,
+                "min_delta": 5.61806875,
+                "max_delta": 7.22323125,
+                "min_ope_coefficients": [
+                    0.0017107999999999997,
+                    -0.124027875
+                ],
+                "max_ope_coefficients": [
+                    0.0021996,
+                    -0.096466125
+                ]
+            },
+            {
+                "name": "spin4_3",
+                "spin": 4,
+                "num_operators": 1,
+                "min_delta": 6.46247,
+                "max_delta": 8.30889,
+                "min_ope_coefficients": [
+                    0.00208026875,
+                    0.20103125
+                ],
+                "max_ope_coefficients": [
+                    0.00267463125,
+                    0.25846875
+                ]
+            },
+            {
+                "name": "spin6",
+                "spin": 6,
+                "num_operators": 1,
+                "min_delta": 6.149927,
+                "max_delta": 7.907049000000001,
+                "min_ope_coefficients": [
+                    0.013773900000000002,
+                    0.057869000000000004
+                ],
+                "max_ope_coefficients": [
+                    0.0177093,
+                    0.074403
+                ]
+            }
+        ]
+    },
+    "negative_parity_spectrum": {
+        "name": "negative_z2",
+        "ope_labels": [
+            "sese"
+        ],
+        "spin_groups": [
+            {
+                "name": "sigma",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 0.5,
+                "max_delta": 0.629537225,
+                "min_ope_coefficients": [
+                    0.9203719874999999
+                ],
+                "max_ope_coefficients": [
+                    1.1833354125
+                ]
+            },
+            {
+                "name": "spin0_1",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 4.629275000000001,
+                "max_delta": 5.951925,
+                "min_ope_coefficients": [
+                    0.050080625000000004
+                ],
+                "max_ope_coefficients": [
+                    0.064389375
+                ]
+            },
+            {
+                "name": "spin2_1",
+                "spin": 2,
+                "num_operators": 1,
+                "min_delta": 3.6577668749999996,
+                "max_delta": 4.702843124999999,
+                "min_ope_coefficients": [
+                    0.34051448375
+                ],
+                "max_ope_coefficients": [
+                    0.43780433625
+                ]
+            },
+            {
+                "name": "spin2_2",
+                "spin": 2,
+                "num_operators": 1,
+                "min_delta": 6.113887500000001,
+                "max_delta": 7.8607125,
+                "min_ope_coefficients": [
+                    0.015236375000000002
+                ],
+                "max_ope_coefficients": [
+                    0.019589625000000003
+                ]
+            },
+            {
+                "name": "spin3",
+                "spin": 3,
+                "num_operators": 1,
+                "min_delta": 4.058285,
+                "max_delta": 5.217795000000001,
+                "min_ope_coefficients": [
+                    0.1211875
+                ],
+                "max_ope_coefficients": [
+                    0.15581250000000002
+                ]
+            },
+            {
+                "name": "spin4",
+                "spin": 4,
+                "num_operators": 1,
+                "min_delta": 5.34858975,
+                "max_delta": 6.87675825,
+                "min_ope_coefficients": [
+                    0.09424205
+                ],
+                "max_ope_coefficients": [
+                    0.12116835000000001
+                ]
+            },
+            {
+                "name": "spin5",
+                "spin": 5,
+                "num_operators": 1,
+                "min_delta": 5.87105575,
+                "max_delta": 7.54850025,
+                "min_ope_coefficients": [
+                    0.03667605375
+                ],
+                "max_ope_coefficients": [
+                    0.04715492625
+                ]
+            }
+        ]
+    }
+}

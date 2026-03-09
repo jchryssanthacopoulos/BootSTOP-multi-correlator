@@ -1,0 +1,150 @@
+{
+    "external_operators": [
+        {
+            "name": "sigma",
+            "spectrum": "negative_parity",
+            "spin_group": 1,
+            "operator": 1
+        },
+        {
+            "name": "epsilon",
+            "spectrum": "positive_parity",
+            "spin_group": 1,
+            "operator": 1
+        }
+    ],
+    "positive_parity_spectrum": {
+        "name": "positive_z2",
+        "ope_labels": [
+            "ssss",
+            "eeee"
+        ],
+        "spin_groups": [
+            {
+                "name": "epsilon",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 0.5,
+                "max_delta": 2.5,
+                "min_ope_coefficients": [-2, -2],
+                "max_ope_coefficients": [2, 2]
+            },
+            {
+                "name": "spin0",
+                "spin": 0,
+                "num_operators": 4,
+                "min_delta": 0.5,
+                "max_delta": 7.5,
+                "min_ope_coefficients": [-2, -2],
+                "max_ope_coefficients": [2, 2]
+            },
+            {
+                "name": "spin2",
+                "spin": 2,
+                "num_operators": 3,
+                "min_delta": 3,
+                "max_delta": 8,
+                "min_ope_coefficients": [-2, -2],
+                "max_ope_coefficients": [2, 2]
+            },
+            {
+                "name": "spin4",
+                "spin": 4,
+                "num_operators": 3,
+                "min_delta": 5,
+                "max_delta": 10,
+                "min_ope_coefficients": [-2, -2],
+                "max_ope_coefficients": [2, 2]
+            },
+            {
+                "name": "spin6",
+                "spin": 6,
+                "num_operators": 2,
+                "min_delta": 7,
+                "max_delta": 12,
+                "min_ope_coefficients": [-2, -2],
+                "max_ope_coefficients": [2, 2]
+            }
+        ]
+    },
+    "negative_parity_spectrum": {
+        "name": "negative_z2",
+        "ope_labels": [
+            "sese"
+        ],
+        "spin_groups": [
+            {
+                "name": "sigma",
+                "spin": 0,
+                "num_operators": 1,
+                "min_delta": 0.5,
+                "max_delta": 2.5,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            },
+            {
+                "name": "spin0",
+                "spin": 0,
+                "num_operators": 4,
+                "min_delta": 0.5,
+                "max_delta": 7.5,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            },
+            {
+                "name": "spin1",
+                "spin": 1,
+                "num_operators": 3,
+                "min_delta": 2,
+                "max_delta": 7,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            },
+            {
+                "name": "spin2",
+                "spin": 2,
+                "num_operators": 2,
+                "min_delta": 3,
+                "max_delta": 8,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            },
+            {
+                "name": "spin3",
+                "spin": 3,
+                "num_operators": 2,
+                "min_delta": 4,
+                "max_delta": 9,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            },
+            {
+                "name": "spin4",
+                "spin": 4,
+                "num_operators": 1,
+                "min_delta": 5,
+                "max_delta": 10,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            },
+            {
+                "name": "spin5",
+                "spin": 5,
+                "num_operators": 1,
+                "min_delta": 6,
+                "max_delta": 11,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            },
+            {
+                "name": "spin6",
+                "spin": 6,
+                "num_operators": 1,
+                "min_delta": 7,
+                "max_delta": 12,
+                "min_ope_coefficients": [0],
+                "max_ope_coefficients": [2]
+            }
+        ]
+    }
+}
