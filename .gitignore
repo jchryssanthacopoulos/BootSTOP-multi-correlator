@@ -1,0 +1,5 @@
+.python-version
+multicorrelator.egg-info/
+env/
+__pycache__/
+*.pyc

@@ -1,0 +1,21 @@
+name: multicorrelator
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - jax
+  - matplotlib
+  - mpmath
+  - numpy
+  - pandas
+  - polars
+  - pydantic
+  - pygmo
+  - scikit-learn
+  - scipy
+  - tqdm
+  - wandb
+  - pip
+  - pip:
+    - -e .
