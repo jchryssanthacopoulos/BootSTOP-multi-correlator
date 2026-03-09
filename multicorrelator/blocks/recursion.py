@@ -605,7 +605,7 @@ class BaseConvolvedBlocksRecursive(ConvolvedBlocks3D):
     """Base class with shared initialization logic for recursive 3D convolved blocks."""
 
     Z_FILE_PATH = (
-        Path(__file__).parent / "../block_lattices/z_pts/output"
+        Path(__file__).parent / "z_pts"
     )
 
     def __init__(
