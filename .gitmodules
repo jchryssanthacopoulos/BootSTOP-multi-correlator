@@ -1,0 +1,3 @@
+[submodule "goblocks"]
+	path = goblocks
+	url = git@github.com:xand-stapleton/goblocks.git
