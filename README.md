@@ -1,74 +1,100 @@
-# BootSTOP (Bootstrap STochastic OPtimizer)
+# BootSTOP Multi-Correlator
 
 ## Overview
 
-BootSTOP is a Python package for determining CFT data (scaling dimensions and OPE coefficients) which minimize a 
-theory's truncated crossing equation. To do this, the code applies algorithms within the 
-[PyGMO package](https://esa.github.io/pygmo2/).
+BootSTOP Multi-Correlator is a Python package for determining CFT data (scaling dimensions and OPE
+coefficients) which minimize a theory's truncated crossing equations in the multi-correlator setting.
+Optimization is performed using algorithms from the [PyGMO package](https://esa.github.io/pygmo2/).
+
+---
 
 ## Installation
 
-Unfortunately, PyGMO cannot be installed easily using pip. Instead, use [Anaconda](https://www.anaconda.com/docs/main) 
-or [Micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html). In the following, 
-Micromamba is used, but the commands are the same for Anaconda, replacing `micromamba` with `anaconda`.
+### 1. Create the conda environment
 
-To install the dependencies, run
-```
-micromamba env create -f conda_env.yml
-```
+PyGMO cannot be installed via pip and requires conda. Use either
+[Anaconda](https://www.anaconda.com/docs/main) or
+[Micromamba](https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html).
+The commands are identical — just replace `conda` with `micromamba` if using Micromamba.
 
-Note that the dependencies in `conda_env.yml` are unpinned, which can be helpful in terms of locating proper versions 
-for your operating environment, but may lead to dependency conflicts.
+Create and activate the environment from the provided `conda_env.yml`:
 
-After installing the dependencies, activate the environment:
-```
-micromamba activate bootstop
+```bash
+conda env create -f conda_env.yml
+conda activate multicorrelator
 ```
 
-In addition to the dependencies, `multiobjective` is a local package that needs to be installed. If it wasn't properly 
-installed in the first step above, simply run this within your activated environment:
-```
-pip install -e .
+This installs all dependencies and the local `multicorrelator` package in editable mode.
+
+### 2. Initialise the goblocks submodule
+
+The conformal block engine is provided as a Git submodule. After cloning the repo, run:
+
+```bash
+git submodule update --init
 ```
 
-## F Block Data
+### 3. Build the goblocks shared library
 
-To run the code, you need to provide a set of F blocks for each spin in your spin partition. For optimizations of the 
-3D Ising model, you need to provide these under `multiobjective/block_lattices/3d`. See one of the project creators 
-to get access to these files.
+Go must be installed ([https://go.dev/doc/install](https://go.dev/doc/install)). Then, from within
+the `goblocks/server/src` directory, run:
+
+```bash
+make
+```
+
+This produces:
+- `goblocks/server/bin/goblocks` — the CLI binary
+- `goblocks/server/lib/librecursive.so` — the shared library used by the Python client
+
+For GPU-accelerated block evaluation:
+
+```bash
+make GPU=1
+```
+
+### 4. Install the goblocks Python client
+
+From within your activated environment, install the Python wrapper:
+
+```bash
+pip install goblocks/client
+```
+
+---
 
 ## Running the Code
 
-The main run scripts are located in the `multiobjective` folder with names beginning with `run`. These run scripts use 
-a config file system, where the spin partition structure is specified in a JSON configuration file which is later 
-loaded up. The config files are located in the `multiobjective/config_files` directory.
+The main entry point is `multicorrelator/run_pygmo_scalar_3d_ising.py`. It takes two config files:
+an optimiser config and a spin partition config.
 
-### PyGMO Optimization
+To see all available options:
 
-To optimize the 3D Ising model using PyGMO, run the script called `run_pygmo_scalar_3d_ising.py`. To get a menu of 
-options you can pass in, run
+```bash
+python multicorrelator/run_pygmo_scalar_3d_ising.py --help
 ```
-python multiobjective/run_pygmo_scalar_3d_ising.py --help
-```
-There are two main way of modeling the OPE coefficients: using four values or three values. To specify which one you 
-want, use the `-l` option.
 
-### PyTorch Optimization
+### Arguments
 
-There is also a more experimental optimization which involves modeling the OPE coefficients of the tail operators using 
-a neural network. To get the options for this script, run
-```
-python3 run_pytorch_scalar_3d_ising.py --help
-```
-Use this in conjunction with the neural network config files like `config_nn.json`.
+| Flag | Short | Description |
+|------|-------|-------------|
+| `--optimiser-config` | `-o` | Path to the optimiser config YAML/JSON file |
+| `--spin-config` | `-s` | Path to the spin partition config YAML/JSON file |
 
-## Tests and Linting
+### Example
 
-To execute unit tests, run
+```bash
+python multicorrelator/run_pygmo_scalar_3d_ising.py \
+    --optimiser-config path/to/optimiser_config.json \
+    --spin-config path/to/spin_config.json
 ```
-pytest
-```
-For linting, run
-```
-flake8
-```
+
+### OPE coefficient models
+
+Two models are available for parameterizing the OPE coefficients, selectable via the optimiser
+config:
+
+- **Four-value model** — uses four independent OPE coefficient values
+- **Three-value model** — uses three independent OPE coefficient values
+
+Specify the desired model using the `lambda_model` field in your optimiser config file.
