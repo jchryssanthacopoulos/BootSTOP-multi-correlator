@@ -7,8 +7,6 @@ from pydantic import BaseModel, Field
 from multicorrelator.blocks.base import ConvolvedBlocks3D
 from multicorrelator.blocks.derivatives.recursion_derivatives import ConvolvedDerivativeBlocksRecursiveGoBlocks
 from multicorrelator.blocks.derivatives.recursion_derivatives import ConvolvedDerivativeBlocksRecursivePython
-from multicorrelator.blocks.kdtree import ConvolvedBlocks3DKDTree
-from multicorrelator.blocks.polynomial import ConvolvedBlocks3DPolynomial
 from multicorrelator.blocks.recursion import ConvolvedBlocksRecursiveGoBlocks
 from multicorrelator.blocks.recursion import ConvolvedBlocksRecursivePython
 
@@ -47,8 +45,6 @@ class FBlockInterpolation(BaseModel):
 
         """
         interpolation_type_to_method = {
-            BlockInterpolationTypeEnum.MULTILINEAR: ConvolvedBlocks3DKDTree,
-            BlockInterpolationTypeEnum.POLYNOMIAL: ConvolvedBlocks3DPolynomial,
             BlockInterpolationTypeEnum.RECURSIVE: ConvolvedBlocksRecursivePython,
             BlockInterpolationTypeEnum.GOBLOCKS: ConvolvedBlocksRecursiveGoBlocks,
             BlockInterpolationTypeEnum.RECURSIVE_DERIVS: ConvolvedDerivativeBlocksRecursivePython,
