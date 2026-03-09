@@ -19,7 +19,7 @@
       "ell_min": 0,
       "ell_max": 6,
       "num_z_points": 100,
-      "z_pts_filename": "sampled_points_first_quadrant.npy"
+      "z_pts_filename": "sampled_points.npy"
     }
   }
 }

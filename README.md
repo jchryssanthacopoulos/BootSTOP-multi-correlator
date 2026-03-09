@@ -98,3 +98,53 @@ config:
 - **Three-value model** — uses three independent OPE coefficient values
 
 Specify the desired model using the `lambda_model` field in your optimiser config file.
+
+---
+
+## Config Files
+
+Example config files are provided under `multicorrelator/config_files/`, split into two
+subdirectories:
+
+### Optimiser configs (`config_files/optimiser/`)
+
+These control the PyGMO optimisation settings and the conformal block backend.
+
+| File | Description |
+|------|-------------|
+| `opt_config_3.json` | Standard run using the goblocks z-point interpolation backend |
+| `opt_config_3_deriv_blocks.json` | Run using the goblocks derivative blocks backend |
+
+Key fields:
+
+| Field | Description |
+|-------|-------------|
+| `pop_size` | Population size for the evolutionary algorithm |
+| `num_islands` | Number of parallel islands |
+| `max_iter` | Maximum number of iterations per evolution |
+| `evolutions` | Number of evolutions to run |
+| `lambda_model` | OPE coefficient model: `"three_value_lambdas"` or `"four_value_lambdas"` |
+| `scaling` | Whether to apply scaling to the search space |
+| `F_block_interpolation.name` | Block backend: `"goblocks"` or `"goblocks_derivs"` |
+| `use_wandb` | Set to `true` to log results to Weights & Biases |
+| `outdir` | Directory where output files are written |
+
+### Spin partition configs (`config_files/spin/`)
+
+These define the operator spectrum — which spins and how many operators per spin — along with
+the search bounds on scaling dimensions and OPE coefficients.
+
+| File | Description |
+|------|-------------|
+| `config_3_lambdas.json` | Broad search over the 3D Ising spectrum |
+| `config_3_lambdas_pbounds_25.json` | Tighter bounds based on a previous optimisation run |
+
+### Quick start
+
+To run with the provided example configs:
+
+```bash
+python multicorrelator/run_pygmo_scalar_3d_ising.py \
+    --optimiser-config multicorrelator/config_files/optimiser/opt_config_3.json \
+    --spin-config multicorrelator/config_files/spin/config_3_lambdas.json
+```
