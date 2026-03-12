@@ -153,7 +153,7 @@ python multicorrelator/run_pygmo_scalar_3d_ising.py \
 
 If you use this repository, please cite!
 
-```
+```bibtex
 @article{Chryssanthacopoulos:2026GoBlocks,
   author  = {Chryssanthacopoulos, James and
              Niarchos, Vasilis and
