@@ -148,3 +148,41 @@ python multicorrelator/run_pygmo_scalar_3d_ising.py \
     --optimiser-config multicorrelator/config_files/optimiser/opt_config_3.json \
     --spin-config multicorrelator/config_files/spin/config_3_lambdas.json
 ```
+
+## Citation
+
+If you use this repository, please cite!
+
+@article{Chryssanthacopoulos:2026GoBlocks,
+  author  = {Chryssanthacopoulos, James and
+             Niarchos, Vasilis and
+             Papageorgakis, Constantinos and
+             Stapleton, Alexander G.},
+  title   = {Efficient Conformal Block Evaluation with GoBlocks},
+  year    = {2026},
+  eprint  = {2603.10627},
+  archivePrefix = {arXiv},
+  primaryClass  = {hep-th},
+  doi     = {10.48550/arXiv.2603.10627},
+  url     = {https://arxiv.org/abs/2603.10627}
+}
+
+@software{bootstop-multi-correlator,
+  author  = {Chryssanthacopoulos, James and
+             Niarchos, Vasilis and
+             Papageorgakis, Constantinos and
+             Stapleton, Alexander G.},
+  title   = {{BootSTOP-multi-correlator}},
+  year    = {2026},
+  url     = {https://github.com/jchryssanthacopoulos/BootSTOP-multi-correlator}
+}
+
+@software{goblocks,
+  author  = {Chryssanthacopoulos, James and
+             Niarchos, Vasilis and
+             Papageorgakis, Constantinos and
+             Stapleton, Alexander G.},
+  title   = {{GoBlocks}},
+  year    = {2026},
+  url     = {https://github.com/xand-stapleton/goblocks}
+}
