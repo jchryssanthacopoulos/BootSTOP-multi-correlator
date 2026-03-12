@@ -153,6 +153,7 @@ python multicorrelator/run_pygmo_scalar_3d_ising.py \
 
 If you use this repository, please cite!
 
+```
 @article{Chryssanthacopoulos:2026GoBlocks,
   author  = {Chryssanthacopoulos, James and
              Niarchos, Vasilis and
@@ -186,3 +187,4 @@ If you use this repository, please cite!
   year    = {2026},
   url     = {https://github.com/xand-stapleton/goblocks}
 }
+```
