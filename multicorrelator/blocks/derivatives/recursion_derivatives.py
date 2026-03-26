@@ -847,7 +847,7 @@ class ConvolvedDerivativeBlocksRecursiveGoBlocks:
         tol: float = 1e-6,
         normalize: Literal["norm_1", "norm_2"] | None = None,
         use_precomputed_phi1: bool = True,
-        use_numeric_derivs: bool = False,
+        use_numeric_derivs: bool = True,
         cache_dir: str = "",
         num_derivs_to_keep: int | None = None
     ):
@@ -1025,7 +1025,7 @@ class ConvolvedDerivativeBlocksRecursiveGoBlocksDg:
         tol: float = 1e-6,
         normalize: Literal["norm_1", "norm_2"] | None = None,
         use_precomputed_phi1: bool = True,
-        use_numeric_derivs: bool = False,
+        use_numeric_derivs: bool = True,
         cache_dir: str = "",
         num_derivs_to_keep: int | None = None
     ):
